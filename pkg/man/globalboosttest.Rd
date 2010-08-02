@@ -7,7 +7,7 @@ globalboosttest(X,Y,Z=NULL,nperm=1000,mstop=1000,mstopAIC=FALSE,pvalueonly=TRUE,
 }
 \arguments{
   \item{X}{A n x p matrix or data frame with observations in rows and variables in columns, whose additional predictive value has to be tested.}
-  \item{Y}{Either a n-vector of type factor (if the prediction outcome is binary) or a \code{Surv} object (if the prediction outcome is a survival time).}
+  \item{Y}{Either a n-vector of type factor (if the prediction outcome is binary), or a numeric vector of length n (if the prediction outcome is numeric and uncensored), or a \code{Surv} object (if the prediction outcome is a survival time).}
   \item{Z}{A n x q matrix or data frame with observations in rows and variables in columns, on which we want to condition. Note that q should be smaller than n. If \code{Z=NULL}, the function \code{globalboosttest} simply assesses the predictive value of \code{X} without conditioning.}
   \item{nperm}{The number of permutations used to derived the p-value.}
   \item{mstop}{A numeric vector giving the number(s) of boosting steps at which the p-value has to be calculated.}
@@ -41,11 +41,11 @@ A list with the following arguments
  }
 
 \references{
-  A. L. Boulesteix and Torsten Hothorn (2009). Testing the additional predictive value of high-dimensional data. Technical Report 64, Department of Statistics, University of Munich. In revision for BMC Bioinformatics.
+  A. L. Boulesteix and Torsten Hothorn (2010). Testing the additional predictive value of high-dimensional data. BMC Bioinformatics 10:78.
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/index.html}),  
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/eng.html}),  
   
   
   Torsten Hothorn (\url{http://www.statistik.lmu.de/~hothorn/})

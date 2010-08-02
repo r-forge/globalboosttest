@@ -32,9 +32,9 @@ if (is.null(Z))
  Z<-rep(1,n)
  }
 
-if (!is.Surv(Y)&!is.factor(Y))
+if (!is.Surv(Y)&!is.factor(Y)&!is.numeric(Y))
  {
- stop("Y must be a factor or a Surv object!")
+ stop("Y must be a factor, a numeric or a Surv object!")
  }
 
 #  surv
@@ -49,6 +49,13 @@ if (is.Surv(Y))
   mstopAIC<-FALSE
   }
  }
+
+if (is.numeric(Y)&!is.Surv(Y))
+ {
+ linpred <- predict(lm(Y~.,data=data.frame(Y=Y,Z)))
+ loss<-GaussReg()
+ }
+
 
 #  factor
 if (is.factor(Y))

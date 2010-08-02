@@ -25,12 +25,13 @@ A list with the following arguments:
 }
 
 
-\author{
-  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/index.html}) 
-  
- 
 
-}
+
+\author{
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/eng.html}),  
+          }
+
+
 \seealso{\code{\link{simdatabin}}}
 
 \examples{
