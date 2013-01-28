@@ -1,6 +1,6 @@
 Package: globalboosttest
-Version: 1.1-0
-Date: 2010-08-02
+Version: 1.1-1
+Date: 2013-01-28
 Title: Testing the additional predictive value of high-dimensional data
 Author: Anne-Laure Boulesteix <boulesteix@ibe.med.uni-muenchen.de>, Torsten Hothorn <torsten.hothorn@stat.uni-muenchen.de>.
 Maintainer: Anne-Laure Boulesteix <boulesteix@ibe.med.uni-muenchen.de>

@@ -60,7 +60,11 @@ if (is.numeric(Y)&!is.Surv(Y))
 #  factor
 if (is.factor(Y))
  {
- linpred <- predict(glm(Y~.,data=data.frame(Y=Y,Z),family=binomial))
+ if (nlevels(Y)>2)
+  {
+  stop("Y must have at most 2 levels")
+  }
+ linpred <- 0.5*predict(glm(Y~.,data=data.frame(Y=Y,Z),family=binomial))
  loss <- Binomial()
  if ( sum(diag(table(Y,sign(linpred)))) == length(Y) ) {
     warning("'Perfect separation' case with clinical variables.")
